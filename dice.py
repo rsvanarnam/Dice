@@ -1,3 +1,10 @@
+""" 
+To do:
+Quantity of dice? Sides of dice? Number of rolls?
+Add dice together and output the number
+Gui buttons / output
+Make better looking dice
+"""
 import random
 
 dice1 = random.randint(1,6)
@@ -33,3 +40,32 @@ elif dice2 == 6:
 else:
     print("Hm. Something isn't working.")
 
+ _________
+|         |
+|    0    |  
+|_________|
+
+ _________
+|  0      |
+|         |  
+|_______0_|
+
+ _________
+|  0      |
+|    0    |  
+|______0__|
+
+ _________
+| 0     0 |
+|         |  
+|_0_____0 |
+
+ _________
+| 0     0 |
+|    0    |  
+|_0_____0 |
+
+ _________
+| 0     0|
+| 0     0|  
+|_0_____0|
