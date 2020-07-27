@@ -1,0 +1,115 @@
+""" 
+To Do:
+Look up previous dice rolls?
+"""
+from microbit import *
+import random
+
+
+diceOne = Image("00000:"
+                "00000:"
+                "00500:"
+                "00000:"                        
+                "00000")
+
+diceTwo = Image("00000:"
+                "05000:"
+                "00000:"
+                "00050:"                        
+                "00000")
+
+diceThree = Image("00000:"
+                  "05000:"
+                  "00500:"
+                  "00050:"                        
+                  "00000")
+
+diceFour = Image("00000:"
+                 "05050:"
+                 "00000:"
+                 "05050:"                        
+                 "00000")
+
+diceFive = Image("00000:"
+                 "05050:"
+                 "00500:"
+                 "05050:"                        
+                 "00000")
+
+diceSix = Image("00000:"
+                "05550:"
+                "00000:"
+                "05550:"                        
+                "00000")
+
+random = randint(1,6)
+
+# Show dice roll on LED matrix
+gesture = accelerometer.current_gesture():
+    if gesture == "shake":
+        if random == 1:
+            display.show(diceOne)
+
+        elif random == 2:
+            display.show(diceTwo)
+
+        elif random == 3:
+            display.show(diceThree)
+
+        elif random == 4:
+            display.show(diceFour)
+
+        elif random == 5:
+            display.show(diceFive)
+
+        elif random == 6:
+            display.show(diceSix)
+else:
+    display.show(Image.SAD)
+
+# Show dice roll on LED matrix
+button_a.is_pressed():
+    if random == 1:
+        display.show(diceOne)
+
+    elif random == 2:
+        display.show(diceTwo)
+
+    elif random == 3:
+        display.show(diceThree)
+
+    elif random == 4:
+        display.show(diceFour)
+
+    elif random == 5:
+        display.show(diceFive)
+
+    elif random == 6:
+        display.show(diceSix)
+    else:
+        display.show(Image.SAD)
+
+# Show number roll on LED matrix
+button_b.is_pressed():
+    if random == 1:
+        display.showNumber(1)
+
+    elif random == 2:
+        display.showNumber(2)
+
+    elif random == 3:
+        display.showNumber(3)
+
+    elif random == 4:
+        display.showNumber(4)
+
+    elif random == 5:
+        display.showNumber(5)
+
+    elif random == 6:
+        display.showNumber(6)
+    else:
+        display.show(Image.SAD)
+
+button_ab.is_pressed():
+    reset()

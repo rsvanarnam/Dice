@@ -7,43 +7,28 @@ Make better looking dice
 """
 import random
 
-dice1 = random.randint(1,6)
-dice2 = random.randint(1,6)
+def rollDice():
+    quantityOfRolls = int(input('How many times would you like to roll the dice?'))
+    count = quantityOfRolls
 
-if dice1 == 1:
-    print("1")
-elif dice1 == 2:
-    print("2")
-elif dice1 == 3:
-    print("3")
-elif dice1 == 4:
-    print("4")
-elif dice1 == 5:
-    print("5")    
-elif dice1 == 6:
-    print("6")
-else:
-    print("Hm. Something isn't working.")
+    while quantityOfRolls >= count and count > 0:
+        print(random.randint(1,6))
+        count = count -1
 
-if dice2 == 1:
-    print("1")
-elif dice2 == 2:
-    print("2")
-elif dice2 == 3:
-    print("3")
-elif dice2 == 4:
-    print("4")
-elif dice2 == 5:
-    print("5")    
-elif dice2 == 6:
-    print("6")
-else:
-    print("Hm. Something isn't working.")
+rollDice()
 
- _________
+"""
+
+while quantity > 0:
+    if random == 1:
+        print("1")
+        count = quantity -1
+    
+__________
 |         |
 |    0    |  
 |_________|
+
 
  _________
 |  0      |
@@ -69,3 +54,4 @@ else:
 | 0     0|
 | 0     0|  
 |_0_____0|
+"""
